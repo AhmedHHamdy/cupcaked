@@ -1,0 +1,1079 @@
+#root {
+  /* max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center; */
+}
+
+body {
+  margin: 0;
+  border: 0.3rem solid #0B0300;
+}
+
+/* Header component */
+
+header {
+  background-color: #FFDA7D;
+  border: 0.3rem solid #0B0300;
+  border-bottom: none;
+
+}
+
+header nav {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.nav-about, .nav-contact, .nav-brand, .nav-shop{
+  color: #0F0500;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-contact {
+  grid-column: span 2;
+}
+
+.nav-brand {
+  grid-column: 7;
+  font-size: 1.5rem;
+}
+
+
+.nav-search, .nav-shoppingCart {
+  color: #0F0500;
+  font-size: 1.4rem;
+}
+
+.nav-search {
+  grid-column: 11;
+  justify-self: end;
+}
+
+.nav-shoppingCart {
+  grid-column: 12;
+  color: #0F0500;
+  justify-self: end;
+}
+
+/* Footer */
+footer {
+  background: #FF9770;
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+}
+
+footer nav {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0.5rem, 1fr));
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+
+.nav-faq, .nav-terms, .nav-customer, .nav-copyright {
+  color: #0F0500;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-terms {
+  grid-column: 2/4;
+}
+
+.nav-customer {
+  grid-column: 4/7;
+}
+
+.nav-copyright {
+  grid-column: 10/13;
+  justify-self: end;
+
+}
+
+
+/* Main */
+
+main {
+  display: grid;
+  grid-template-columns: repeat(14, minmax(1rem, 1fr));
+  border: 0.3rem solid #0B0300;
+}
+
+.main-cupcake-one {
+  background: url("./assets/cupcakes_high_angle.jpg") 50% 20% no-repeat;
+
+
+  /* width: 60%; */
+  width: 100%;
+  background-size: cover;
+  grid-column: 1/4;
+  border: 0.3rem solid #0B0300;
+  border-left: none;
+}
+
+
+.main-content {
+  background: #FF9770;
+  color: #0F0500;
+  grid-column: 4/10;
+  border: 0.3rem solid #0B0300;
+  border-right: none;
+  height: 45vh;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /* grid-template-rows: 15rem; */
+  align-items: center;
+
+}
+
+.main-content h1 {
+  font-weight: 900;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Tilt Warp', cursive;
+  margin: 0;
+  grid-column: 2/6;
+  /* padding-top: 3rem; */
+}
+
+
+.main-content a  {
+  font-family: "inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  /* margin-top: 2.3rem; */
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #FFFFFF;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.8rem 3rem;
+  box-shadow: 10px 10px 0px 0px,10px 10px 0px 0px, 10px 10px 0px 0px, 10px 10px 0px 0px, 10px 10px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  grid-column: 2/5; 
+  align-self: start;
+  text-align: center;
+  /* Fix this grid-column 2/6 */
+}
+
+.main-content a:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+.main-content a:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+
+/* 
+@media (min-width: 768px) {
+  .main-content a {
+    padding: 0.25em 0.75em;
+  }
+} */
+
+.main-cupcake-two {
+  background: url("./assets/cupcake_with_icing.jpg") 50% no-repeat;
+  width: 100%;
+  background-size: cover;
+  grid-column: 10/15;
+  grid-row: span 2;
+  border: 0.3rem solid #0B0300;
+  /* border-right: none; */
+}
+
+@media screen and (min-width:1024px) {
+  .main-cupcake-two {
+    width: 99%;
+  }
+}
+
+
+@media screen and (max-width:1020px) {
+  .main-content a  {
+    grid-column: 2/6;
+  }
+}
+
+
+.main-info {
+  background: #FF80B0;
+  color: #0F0500;
+  grid-row: 2;
+  grid-column: 1/5;
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: none;
+
+}
+
+.main-info h2 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  font-family: "inter", sans-serif;
+  margin: 0;
+  width: 80%;
+}
+
+.main-info p {
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: "inter", sans-serif;
+  width: 80%;
+}
+
+
+
+.main-cupcake-three {
+  background: url("./assets/cupcake.jpg") 20% 100% no-repeat;
+  height: 45vh;
+  width: 99%;
+  background-size: cover;
+  grid-column: 5/8;
+  grid-row: 2;
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+  border-right: none;
+}
+
+
+.main-cupcake-background {
+  background: #97E1FF;
+  grid-column: 8/10;
+  grid-row: 2;
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+  border-right: none;
+}
+
+
+/* Learn More Section */
+
+.learn-more-section {
+  display: grid;
+  grid-template-columns:  repeat(12, minmax(1rem, 1fr));
+}
+
+.learn-more-section-background {
+  background: url("./assets/cupcakes-with_strawberry_jam_background.jpg") 60% no-repeat;
+  width: 100%;
+  background-size: cover;
+  height: 85vh;
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+  border-right: none;
+  grid-column: 1/8;
+}
+
+.learn-more-section-content {
+  background: #FFDA7D;
+  grid-column: 8/-1;
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.learn-more-section-content h2 {
+  font-weight: 800;
+  font-size: 2rem;
+  font-family: "inter", sans-serif;
+  margin: 0;
+
+}
+
+.learn-more-section-content p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: "inter", sans-serif;
+  margin: 2rem 0 0 0;
+
+}
+
+.learn-more-section-content a  {
+  font-family: "inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 2rem 0 0 0;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #FFFFFF;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.8rem 3rem;
+  box-shadow: 10px 10px 0px 0px,10px 10px 0px 0px, 10px 10px 0px 0px, 10px 10px 0px 0px, 10px 10px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  grid-column: 2/5; 
+  align-self: start;
+  /* Fix this grid-column 2/6 */
+}
+
+.learn-more-section-content a:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+
+.learn-more-section-content a:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width:1020px) {
+  .learn-more-section-content {
+    padding: 0 1rem 0 1rem;
+  }
+
+  .learn-more-section-content h2 {
+    font-size: 1.55rem;
+  }
+
+  .learn-more-section-content a {
+    margin-top: 1rem;
+  }
+}
+
+
+/* Cupcake Collection Section */
+
+.cupcake-section-collection {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(1rem, 1fr));
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+}
+
+
+.cupcake-collection-info {
+  background: #96DFFC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  grid-column: 1/5;
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.cupcake-collection-info h2 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  font-family: "inter", sans-serif;
+  margin: 0;
+}
+
+
+.cupcake-collection {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(1rem, 1fr));
+  grid-column: 5/10;
+  grid-row: span 2;
+}
+
+.cupcake-collection  div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+}
+
+
+.cupcake-one-container {
+  grid-column: 1/2;
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+}
+
+.cupcake-two-container {
+  grid-column: 2/3;
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+  border-left: none;
+}
+
+.cupcake-three-container {
+  grid-column: 1/2;
+  grid-row: 2;
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+  border-bottom: none;
+}
+
+.cupcake-four-container {
+  grid-column: 2/3;
+  grid-row: 2;
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+}
+
+
+.cupcake-one {
+  background: url("../src/assets/cupcake-sprickle.jpg") 0 no-repeat;
+  height: 40vh;
+  background-size: cover;
+}
+
+.cupcake-two {
+  background: url("../src/assets/cupcake_oreo.jpg") 0 no-repeat;
+  height: 40vh;
+  background-size: cover;
+}
+
+.cupcake-three {
+  background: url("../src/assets/Chocolate\ Cupcake\ with\ Mint\ Buttercream.jpg") 0 no-repeat;
+  height: 40vh;
+  background-size: cover;
+}
+
+.cupcake-four {
+  background: url("../src/assets/cupcakes.jpg") 0 no-repeat;
+  height: 40vh;
+  background-size: cover;
+}
+
+
+
+.cupcake-collection h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: "inter", sans-serif;
+  margin: 0;
+  background: #FFDA7D;
+  padding: 1rem;
+  border: 0.3rem solid #0B0300;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.cupcake-background-blue {
+  background: #96DFFC;
+  grid-column: 10/-1;
+}
+
+.cupcake-shop {
+  background: #FF80B0;
+  grid-column: 1/5;
+  grid-row: 2;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  padding: 2rem;
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.cupcake-shop a {
+  font-family: "inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #FFFFFF;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.8rem 3rem;
+  box-shadow: 10px 10px 0px 0px,10px 10px 0px 0px, 10px 10px 0px 0px, 10px 10px 0px 0px, 10px 10px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  grid-column: 2/5; 
+}
+
+.cupcake-shop a:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+.cupcake-shop a:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.cupcake-background-red {
+  background: #FF80B0;
+  grid-column: 10/-1;
+  grid-row: 2;
+  border: 0.3rem solid #0B0300;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+
+/* About Page */
+
+.about-page-container {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(1rem, 1fr));
+}
+
+.about-page-chef-image {
+  background: url("../src/assets/chef.jpg") 60% no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+  grid-column: 1/4;
+  border: 0.3rem solid #0B0300;
+}
+
+.about-page-heading {
+  background: #97E1FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 4/-1;
+  border: 0.3rem solid #0B0300;
+  border-left: none;
+  padding: 0rem;
+  height: 45vh;
+}
+
+.about-page-heading h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  font-family: "inter", sans-serif;
+  margin: 0;
+  width: 80%;
+}
+
+.about-page-info {
+  background: #FF80B0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-row: 2;
+  grid-column: 4/-1;
+  border: 0.3rem solid #0B0300;
+  border-top: none;
+  border-left: none;
+  padding: 2.5rem 0rem;
+}
+
+.about-page-info p {
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: "inter", sans-serif;
+  margin: 0;
+  line-height: 1.5;
+  width: 80%;
+}
+
+.about-page-info p+p {
+  margin-top: 2rem;
+}
+
+.about-page-info p span {
+  font-weight: 600;
+}
+
+
+/* Contact Page */
+
+.contact-page-container {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(1rem, 1fr));
+
+}
+
+.contact-page-form {
+  background: #97E1FF;
+  grid-column: 1/5;
+  padding: 3rem 3rem 4rem 3rem;
+  border: 0.3rem solid #0B0300;
+}
+
+.contact-page-form h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  font-family: "inter", sans-serif;
+  margin: 0;
+}
+
+.contact-page-form form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.contact-page-form form label {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-family: "inter", sans-serif;
+}
+
+.contact-page-form form input {
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  border: 0.3rem solid #0B0300;
+  font-size: 1.5rem;
+  text-indent: 1rem;
+}
+
+.contact-page-form form textarea {
+  width: 99.5%;
+  height: 30vh;
+  border: 0.3rem solid #0B0300;
+  font-size: 1.5rem;
+  text-indent: 1rem;
+}
+
+.contact-page-form form button  {
+  font-family: "inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #FFFFFF;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.8rem 3rem;
+  box-shadow: 10px 10px 0px 0px,10px 10px 0px 0px, 10px 10px 0px 0px, 10px 10px 0px 0px, 10px 10px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-align: center;
+  /* Fix this grid-column 2/6 */
+}
+
+.contact-page-form form button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+.contact-page-form form button:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+
+.contact-page-info {
+  background: #FF80B0;
+  grid-column: 5/-1;
+  border: 0.3rem solid #0B0300;
+  border-left: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem 3rem;
+}
+
+.contact-page-info p {
+  font-weight: 600;
+  font-size: 2.5rem;
+  font-family: "inter", sans-serif;
+  margin: 0;
+  /* padding-top: 6.6rem; */
+  line-height: 1.5;
+  width: 100%;
+}
+
+
+
+/* Media Queries. */
+/* Home Page Media Query */
+
+@media screen and (min-width:1000px) and (max-width:1700px) {
+  .main-content h1 {
+    font-size: 3rem;
+  }
+
+  .main-cupcake-three {
+    background-position: 30%;
+  }
+
+  .cupcake-one {
+    background-position: 50%;
+  }
+
+  .cupcake-three {
+    background-position: 50%;
+  }
+}
+
+@media screen and (min-width:1300px)and (max-width:1700px)  {
+  .main-cupcake-three {
+    background-position: 23% 100%;
+  }
+}
+
+@media screen and (min-width:1000px) and (max-width:1320px) {
+  .main-content a {
+    grid-column: 2/6;
+  }
+}
+
+
+@media screen and (min-width:720px) and (max-width:999px) {
+  .main-content h1 {
+    font-size: 2.7rem;
+  }
+
+  .main-info h2 {
+    font-size: 2rem;
+  }
+
+  .main-cupcake-three {
+    background-position: 40%;
+  }
+
+  .learn-more-section-content {
+    padding: 1rem;
+  }
+
+  .learn-more-section-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .learn-more-section-content p {
+    font-size: 1rem;
+  }
+
+  .cupcake-collection-info h2 {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+
+  .cupcake-one {
+    background-position: 50%;
+    height: 41.6vh;
+  }
+
+  .cupcake-one-container h3 {
+    font-size: 1.7rem;
+  }
+
+  .cupcake-two {
+    background-position: 20%;
+    height: 45vh;
+  }
+
+  .cupcake-three {
+    background-position: 50%;
+  }
+
+  .cupcake-shop a {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+}
+
+
+@media screen and (min-width:520px) and (max-width:719px) {
+  .main-content {
+    grid-column: 1/10;
+  }
+
+  .main-content h1 {
+    font-size: 2rem;
+  }
+
+  .main-content a {
+    font-size: 1rem;
+    grid-column: 2/2;
+  }
+
+  .main-info h2 {
+    font-size: 1rem;
+  }
+
+  .main-cupcake-one {
+    display: none;
+  }
+
+  .main-info {
+    grid-column: 5/10;
+    background: #96DFFC;
+  }
+
+
+  .main-cupcake-three {
+    grid-column: 1/5;
+    background-position: 35%;
+  }
+
+  .main-cupcake-background {
+    display: none;
+  }
+
+  .learn-more-section-content {
+    padding: 1rem;
+  }
+
+  .learn-more-section-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .learn-more-section-content p {
+    font-size: 1rem;
+  }
+
+  .learn-more-section-background {
+    height: 120vh;
+  }
+
+  .cupcake-collection-info {
+    grid-column: 1/4;
+    display: none;
+  }
+
+  .cupcake-collection-info h2 {
+    font-size: 1rem;
+  }
+
+  .cupcake-shop {
+    grid-column: 1/4;
+    display: none;
+  }
+
+  .cupcake-background-blue {
+    display: none;
+  }
+
+  .cupcake-background-red {
+    display: none;
+  }
+
+  .cupcake-collection {
+    grid-column: 1/11;
+  }
+
+  .cupcake-one {
+    background-position: 20%;
+  }
+
+  .cupcake-two {
+    background-position: 20%;
+  }
+
+  .cupcake-three {
+    background-position: 20%;
+  }
+
+  .cupcake-four {
+    background-position: 20%;
+  }
+
+}
+
+
+
+@media screen and (min-width:320px) and (max-width:519px) {
+  .main-cupcake-one {
+    display: none;
+  }
+
+  .main-content {
+    grid-column: 1/-1;
+  }
+
+  .main-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-cupcake-two {
+    display: none;
+  }
+
+  .main-cupcake-three {
+    display: none;
+  }
+
+  .main-info {
+    grid-column: 1/10;
+  }
+
+  .main-info h2 {
+    font-size: 1.9rem;
+  }
+
+  .main-cupcake-background {
+    grid-column: 10/-1;
+  }
+
+  .learn-more-section-background {
+    display: none;
+  } 
+
+  .learn-more-section-content {
+    grid-column: 1/-1;
+    height: 90vh;
+  }
+
+  .learn-more-section-content h2 {
+    font-size: 2rem;
+  }
+
+  .cupcake-collection-info {
+    grid-column: 1/4;
+    display: none;
+  }
+
+  .cupcake-collection-info h2 {
+    font-size: 1rem;
+  }
+
+  .cupcake-shop {
+    grid-column: 1/4;
+    display: none;
+  }
+
+  .cupcake-background-blue {
+    display: none;
+  }
+
+  .cupcake-background-red {
+    display: none;
+  }
+
+  .cupcake-collection {
+    grid-column: 1/11;
+  }
+
+  .cupcake-one-container h3 {
+    font-size: 1rem;
+  }
+
+  .cupcake-two-container h3 {
+    font-size: 1rem;
+  }
+
+
+  .cupcake-one {
+    background-position: 50%;
+    height: 50vh;
+  }
+
+  .cupcake-two {
+    background-position: 28%;
+    height: 50vh;
+  }
+
+  .cupcake-three {
+    background-position: 50%;
+    height: 50vh;
+  }
+
+  .cupcake-four {
+    background-position: 55%;
+    height: 50vh;
+  }
+}
+
+@media screen and (min-width:360px) and (max-width:390px) {
+  .learn-more-section-content {
+    grid-column: 1/-1;
+    height: 120vh;
+    max-height: 120vh;
+  }
+}
+
+@media screen and (min-width:360px) and (max-width:370px) {
+  .cupcake-one {
+    background-position: 50%;
+    height: 42.6vh;
+  }
+
+  .cupcake-two {
+    background-position: 28%;
+    height: 45.5vh;
+  }
+
+  .cupcake-three {
+    background-position: 50%;
+    height: 40vh;
+  }
+
+  .cupcake-four {
+    background-position: 55%;
+    height: 44vh;
+  }
+}
+
+
+/* About Page Media Query */
+@media screen and (min-width:320px) and (max-width:519px) {
+  .about-page-chef-image {
+    display: none;
+  }
+
+  .about-page-heading {
+    grid-column: 1/-1;
+    border-left: 0.3rem solid #0B0300;
+  }
+
+  .about-page-info {
+    grid-column: 1/-1;
+    border-left: 0.3rem solid #0B0300;
+  }
+}
+
+
+/* Contact Page Media Query */
+@media screen and (min-width:320px) and (max-width:720px) {
+
+  .contact-page-info {
+    grid-column: 1/-1;
+    border-left: 0.3rem solid #0B0300;
+    border-bottom: none;
+    padding: 2rem 2rem;
+  }
+
+  .contact-page-info p {
+    padding: 0;
+  }
+
+  .contact-page-form {
+    grid-row: 2;
+    grid-column: 1/-1;
+  }
+}
